@@ -9,3 +9,14 @@ def longest(a1, a2):
 
 print(longest(a,b))
 print(longest(c,c))
+
+import codewars_test as test
+
+
+@test.describe("longest")
+def fixed_tests():
+    @test.it("basic tests")
+    def basics():
+        test.assert_equals(longest("aretheyhere", "yestheyarehere"), "aehrsty")
+        test.assert_equals(longest("loopingisfunbutdangerous", "lessdangerousthancoding"), "abcdefghilnoprstu")
+        test.assert_equals(longest("inmanylanguages", "theresapairoffunctions"), "acefghilmnoprstuy")

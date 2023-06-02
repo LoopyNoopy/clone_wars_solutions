@@ -1,1 +1,2 @@
 codewars_test==0.2.1
+#pip install git+https://github.com/codewars/python-test-framework.git#egg=codewars_test

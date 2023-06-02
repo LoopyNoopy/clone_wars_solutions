@@ -11,9 +11,15 @@ def digital_root(n):
         for digit in str(final):
             iterate += int(digit)
             final = iterate
-            print(str(final))
     return iterate
 
+import codewars_test as test
 
-for number in numbers:
-    print(digital_root(number))
+@test.describe("Sum of Digits / Digital Root")
+def fixed_tests():
+    @test.it('Basic Test Cases')
+    def basic_test_cases():
+        test.assert_equals(digital_root(16), 7)
+        test.assert_equals(digital_root(942), 6)
+        test.assert_equals(digital_root(132189), 6)
+        test.assert_equals(digital_root(493193), 2)

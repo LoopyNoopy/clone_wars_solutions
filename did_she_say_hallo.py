@@ -7,3 +7,20 @@ def validate_hello(greetings):
             return True
     else:
         return False
+
+import codewars_test as test
+
+@test.describe("Did She say Hallo")
+def fixed_tests():
+    @test.it('Basic Test Cases')
+    def basic_test_cases():
+        test.assert_equals(validate_hello('hello'),True)
+        test.assert_equals(validate_hello('ciao bella!'),True)
+        test.assert_equals(validate_hello('salut'),True)
+        test.assert_equals(validate_hello('hallo, salut'),True)
+        test.assert_equals(validate_hello('hombre! Hola!'),True)
+        test.assert_equals(validate_hello('Hallo, wie geht\'s dir?'),True)
+        test.assert_equals(validate_hello('AHOJ!'),True)
+        test.assert_equals(validate_hello('czesc'),True)
+        test.assert_equals(validate_hello('meh'),False)
+        test.assert_equals(validate_hello('Ahoj'),True)
